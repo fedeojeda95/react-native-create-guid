@@ -53,11 +53,11 @@ Since native platforms already have ways to create GUIDs that are useful, creati
 Check the example under `example` folder for it's usage.
 
 ```javascript
-import { createGuid } from "react-native-create-guid";
+import createGuid from "react-native-create-guid";
 
 // in an async function;
 const guid = await createGuid();
 
 // using promises
-createGuid().then(guid => console.log(guid));
+createGuid().then((guid) => console.log(guid));
 ```

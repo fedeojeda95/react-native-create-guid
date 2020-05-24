@@ -1,5 +1,7 @@
-import { NativeModules } from 'react-native';
+import { NativeModules } from "react-native";
 
-const { CreateGuid } = NativeModules;
+const {
+  CreateGuid: { createGuid },
+} = NativeModules;
 
-export default CreateGuid;
+export default createGuid;
