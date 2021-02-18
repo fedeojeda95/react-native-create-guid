@@ -4,12 +4,12 @@ using System;
 namespace CreateGuid
 {
     [ReactModule("CreateGuid")]
-    public sealed class CreateGuidModule
+    class CreateGuidModule
     {
         [ReactMethod("createGuid")]
-        public string CreateGuid()
+        public void CreateGuid(ReactPromise<JSValue> promise)
         {
-            return Guid.NewGuid().ToString();
+            promise.Resolve(Guid.NewGuid().ToString());
         }
     }
 }
